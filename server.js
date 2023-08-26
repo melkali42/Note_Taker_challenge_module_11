@@ -80,12 +80,12 @@ app.delete("/api/notes/:id", function (req, res) {
 
 // when the Get started button is clicked display the note.html Web page
 app.get("/notes", function (req, res) {
-  res.sendFile(path.join(__dirname, "public/notes.html"));
+  res.sendFile(path.join(__dirname, "./public/notes.html"));
 });
 
 // If no matching route is found, then default to home
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "public/index.html"));
+  res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
 app.get("/api/notes", function (req, res) {
